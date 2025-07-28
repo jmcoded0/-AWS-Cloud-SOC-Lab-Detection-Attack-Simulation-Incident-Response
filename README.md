@@ -4,7 +4,7 @@
 This project is a hands-on simulation of a cloud security incident in AWS, built to practice infrastructure automation, attack simulation, and incident response. I automated the creation of an AWS environment, simulated malicious activity, detected threats with GuardDuty, and performed manual containment just like a SOC analyst. All work was done in a fully isolated AWS environment using Kali Linux.
 
 📁 Full project documentation with all screenshots and commands:  
-👉 [documenting.md](https://github.com/jmcoded0/AWS-Cloud-SOC-Detection-Engineering-Lab/blob/main/documenting.md)
+👉 [documenting.md](https://github.com/jmcoded0/-AWS-Cloud-SOC-Lab-Detection-Attack-Simulation-Incident-Response/blob/main/documenting.md)
 
 ## 🎯 Project Goals
 - Automate AWS infrastructure (VPC, EC2, security groups) using Python and Boto3.
