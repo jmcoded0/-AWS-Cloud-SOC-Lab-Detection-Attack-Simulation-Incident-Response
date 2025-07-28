@@ -1,4 +1,4 @@
-# ☁️ AWS Cloud SOC Detection Engineering Lab
+# ☁️ AWS Cloud SOC Lab: Detection, Attack Simulation & Incident Response
 
 ## 📌 Overview
 This project is a hands-on simulation of a cloud security incident in AWS, built to practice infrastructure automation, attack simulation, and incident response. I automated the creation of an AWS environment, simulated malicious activity, detected threats with GuardDuty, and performed manual containment just like a SOC analyst. All work was done in a fully isolated AWS environment using Kali Linux.
