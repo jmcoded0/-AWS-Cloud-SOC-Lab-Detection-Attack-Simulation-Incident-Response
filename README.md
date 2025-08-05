@@ -4,7 +4,7 @@ AWS Cloud SOC Simulation: Detection, Attack Emulation & Incident Response
 This project simulates a real-world cloud security incident using AWS. It covers everything from infrastructure automation to attack simulation and incident response. I used Python and Boto3 to automate VPC and EC2 deployment, launched attack simulations from a Kali machine, and investigated alerts with GuardDuty and CloudTrail like a real SOC analyst.
 
 🔗 Full documentation with screenshots and commands:  
-👉 [documenting.md](https://github.com/jmcoded0/-AWS-Cloud-SOC-Lab-Detection-Attack-Simulation-Incident-Response/blob/main/documenting.md)
+👉 [documenting.md](https://github.com/jmcoded0/AWS-Cloud-SOC-Simulation-Detection-Attack-Emulation-Incident-Response/blob/main/documenting.md)
 
 ## 🧰 Tools & Skills Used
 - **Cloud:** AWS (EC2, VPC, GuardDuty, CloudTrail, CloudWatch, IAM, SSM)
